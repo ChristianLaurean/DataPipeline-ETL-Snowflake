@@ -2,35 +2,35 @@
 
 ![Diagrama del Pipeline ETL](https://github.com/ChristianLaurean/my_obsidian/blob/main/01%20-%20Projects/ETL%20Basico/Dise%C3%B1o_ETL.excalidraw.png)
 
-Este repositorio contiene un Data Pipeline ETL (Extract, Transform, Load) que extrae datos de varias fuentes, los transforma y los carga en una base de datos Snowflake como parte de un proceso de ETL.
+This repository contains an ETL (Extract, Transform, Load) Data Pipeline that extracts data from various sources, transforms it, and loads it into a Snowflake database as part of the ETL process.
 
-## Estructura del Proyecto
+## Project Structure
 
-El proyecto está estructurado de la siguiente manera:
+The project is structured as follows:
 
-- **dockerfile**: Contiene el archivo Dockerfile para la configuración del contenedor.
-- **etl**: Directorio principal del código fuente del pipeline ETL.
-  - **src**: Contiene los archivos de origen de datos.
-  - **constants.py**: Archivo que define las constantes utilizadas en el pipeline.
-  - **pipeline_utils.py**: Módulo que contiene las funciones de utilidad para el pipeline.
-  - **etl_pipeline.py**: Script principal que orquesta el proceso de ETL.
+- **dockerfile**: Contains the Dockerfile for container configuration.
+- **etl**: Main directory for the ETL pipeline source code.
+  - **src**: Contains source data files.
+  - **constants.py**: File defining constants used in the pipeline.
+  - **pipeline_utils.py**: Module containing utility functions for the pipeline.
+  - **etl_pipeline.py**: Main script orchestrating the ETL process.
 
-## Requisitos
+## Requirements
 
-Antes de ejecutar el pipeline, asegúrate de tener instalado Docker y haber configurado las variables de entorno necesarias para la conexión a la base de datos OLTP y Snowflake.
+Before running the pipeline, make sure you have Docker installed and have configured the necessary environment variables for connecting to the OLTP database and Snowflake.
 
-## Uso
+## Usage
 
-1. Clona este repositorio en tu máquina local.
-2. Configura las variables de entorno necesarias en un archivo `.env` en el directorio raíz del proyecto.
-3. Ejecuta el siguiente comando para construir la imagen Docker:
+1. Clone this repository to your local machine.
+2. Configure the necessary environment variables in a `.env` file in the project's root directory.
+3. Run the following command to build the Docker image:
 
-```bash
-docker build -t nombre_imagen .
+```
+docker build -t image_name .
 ```
 
-Una vez que la imagen Docker se haya construido correctamente, ejecuta el siguiente comando para crear y ejecutar un contenedor basado en la imagen:
+Once the Docker image is successfully built, run the following command to create and run a container based on the image:
 
-```bash
-docker run nombre_imagen
+```
+docker run image_name
 ```
