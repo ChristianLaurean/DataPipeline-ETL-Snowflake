@@ -29,6 +29,7 @@
 pyvenv.cfg
 .venv
 /venv
+venv/share
 pip-selfcheck.json
 
 ### Windows ###
